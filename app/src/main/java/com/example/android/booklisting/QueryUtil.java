@@ -45,7 +45,7 @@ public final class QueryUtil {
                 JSONObject currentBook = bookArray.getJSONObject(i);
                 JSONObject volumeInfo =  currentBook.getJSONObject("volumeInfo");
                 String title = volumeInfo.getString("title");
-                String author = volumeInfo.getString("authors");
+                String author = arrayToString(volumeInfo.getString("authors").split(","));
                 String thumbNail = volumeInfo.getJSONObject("imageLinks").getString("thumbnail");
                 Log.e("QueryUtils","img :"+ thumbNail);
                 books.add(new Book(title,author,getImageFromUrl(thumbNail,title)));
@@ -142,14 +142,13 @@ public final class QueryUtil {
 
     }
 
-    private static String arrayToString (JSONArray arr ){
+    private static String arrayToString (String []  arr ){
         StringBuilder builder = new StringBuilder();
-        try{
-            for (int i = 0; i < arr.length(); i++){
-                builder.append(arr.getJSONObject(i).getString(""));
-            }
-        }catch (JSONException e){
-            return null;
+        for (int i = 0; i < arr.length; i++) {
+            Log.e(LOG_TAG,"author: "+arr[i]);
+            builder.append(arr[i].substring(0,arr[i].length()));
+            builder.append(", ");
         }
+        return builder.toString();
     }
 }
