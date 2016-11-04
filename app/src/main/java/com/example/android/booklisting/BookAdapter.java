@@ -1,6 +1,8 @@
 package com.example.android.booklisting;
 
 import android.app.Activity;
+import android.graphics.Bitmap;
+import android.media.ThumbnailUtils;
 import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,7 +21,6 @@ public class BookAdapter extends ArrayAdapter<Book> {
 
     public BookAdapter(Activity context, ArrayList<Book> content){super(context,0, content);}
 
-    @NonNull
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         Book current = getItem(position);
@@ -35,7 +36,9 @@ public class BookAdapter extends ArrayAdapter<Book> {
         author.setText(current.getAuthor());
 
         ImageView cover = (ImageView) convertView.findViewById(R.id.book_thumbnail);
-        cover.setImageResource(current.getThumbnail());
+
+        cover.setImageDrawable(current.getThumbnail());
+
 
         return convertView;
     }

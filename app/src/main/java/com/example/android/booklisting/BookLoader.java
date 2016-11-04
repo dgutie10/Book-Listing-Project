@@ -11,8 +11,11 @@ import java.util.List;
 
 public class BookLoader extends AsyncTaskLoader<List<Book>> {
 
-    public BookLoader(Context context){
+    private String url;
+
+    public BookLoader(Context context, String url){
         super (context);
+        this.url = url;
     }
 
     @Override
@@ -22,6 +25,10 @@ public class BookLoader extends AsyncTaskLoader<List<Book>> {
 
     @Override
     public List<Book> loadInBackground() {
-        return null;
+        if (url ==null) return null;
+
+        List<Book> result = QueryUtil.fetchBooks(url);
+
+        return result;
     }
 }

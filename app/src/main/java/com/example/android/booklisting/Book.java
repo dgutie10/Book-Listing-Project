@@ -1,5 +1,7 @@
 package com.example.android.booklisting;
 
+import android.graphics.drawable.Drawable;
+
 /**
  * Created by diegog on 11/3/2016.
  */
@@ -7,9 +9,9 @@ package com.example.android.booklisting;
 public class Book {
     private String title;
     private String author;
-    private int thumbnail;
+    private Drawable thumbnail;
 
-    public Book(String title, String author, int thumbnail) {
+    public Book(String title, String author, Drawable thumbnail) {
         this.title = title;
         this.author = author;
         this.thumbnail = thumbnail;
@@ -19,5 +21,5 @@ public class Book {
 
     public String getAuthor() {return author;}
 
-    public int getThumbnail() {return thumbnail;}
+    public Drawable getThumbnail() {return thumbnail;}
 }

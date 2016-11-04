@@ -7,6 +7,7 @@ import android.app.LoaderManager;
 import android.content.Loader;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -18,13 +19,16 @@ public class BookActivity extends AppCompatActivity implements LoaderManager.Loa
 
     //Global variables
     private static final int EARTHQUAKE_LOADER_ID = 1;
-    private static final String USGS_REQUEST_URL = "http://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&orderby=time&minmag=5&limit=10";
+    private static final String BOOK_REQUEST_URL = "https://www.googleapis.com/books/v1/volumes?q=android&maxResults=3";
+    public static final String LOG_TAG = BookActivity.class.getName();
     private NetworkInfo networkInfo;
     protected TextView emptyTextView;
     private BookAdapter bookAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Log.e(LOG_TAG,"onCreate initiated");
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_book);
 
@@ -45,7 +49,8 @@ public class BookActivity extends AppCompatActivity implements LoaderManager.Loa
 
     @Override
     public Loader<List<Book>> onCreateLoader(int id, Bundle args) {
-        return new BookLoader(this);
+        Log.e(LOG_TAG,"onCreateLoader initiated");
+        return new BookLoader(this, BOOK_REQUEST_URL);
     }
 
     @Override
@@ -53,11 +58,11 @@ public class BookActivity extends AppCompatActivity implements LoaderManager.Loa
         View progressBar = findViewById(R.id.progress_bar);
         progressBar.setVisibility(View.GONE);
 
-        if (networkInfo != null && networkInfo.isConnected()){
-            emptyTextView.setText(R.string.no_books);
-        }else{
-            emptyTextView.setText(R.string.no_connection);
-        }
+//        if (networkInfo != null && networkInfo.isConnected()){
+//            emptyTextView.setText(R.string.no_books);
+//        }else{
+//            emptyTextView.setText(R.string.no_connection);
+//        }
 
         bookAdapter.clear();
         if(data != null && !data.isEmpty())bookAdapter.addAll(data);
