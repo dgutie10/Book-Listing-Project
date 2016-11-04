@@ -58,11 +58,11 @@ public class BookActivity extends AppCompatActivity implements LoaderManager.Loa
         View progressBar = findViewById(R.id.progress_bar);
         progressBar.setVisibility(View.GONE);
 
-//        if (networkInfo != null && networkInfo.isConnected()){
-//            emptyTextView.setText(R.string.no_books);
-//        }else{
-//            emptyTextView.setText(R.string.no_connection);
-//        }
+        if (networkInfo != null && networkInfo.isConnected()){
+            emptyTextView.setText(R.string.no_books);
+        }else{
+            emptyTextView.setText(R.string.no_connection);
+        }
 
         bookAdapter.clear();
         if(data != null && !data.isEmpty())bookAdapter.addAll(data);
