@@ -136,7 +136,7 @@ public final class QueryUtil {
             return image;
 
         }catch (IOException e){
-            Log.e(LOG_TAG,"getImageFromUrl: Error retrieving image.",e);
+            Log.i(LOG_TAG,"getImageFromUrl: Error retrieving image.",e);
             return null;
         }
 
@@ -146,10 +146,11 @@ public final class QueryUtil {
         String[] arr = authors.substring(1,authors.length()-1).split(",");
         StringBuilder builder = new StringBuilder();
         for (int i = 0; i < arr.length; i++) {
-            Log.e(LOG_TAG,"author: "+arr[i].substring(1,arr[i].length()-1));
+            Log.i(LOG_TAG,"author: "+arr[i].substring(1,arr[i].length()-1));
             builder.append(arr[i].substring(1,arr[i].length()-1));
             builder.append(", ");
         }
-        return builder.toString();
+        String finalString = builder.toString().trim();
+        return finalString.substring(0,finalString.length()-1);
     }
 }

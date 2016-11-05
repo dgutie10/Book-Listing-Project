@@ -34,6 +34,7 @@ public class BookActivity extends AppCompatActivity implements LoaderManager.Loa
 
         ListView bookListView = (ListView) findViewById(R.id.list);
 
+        emptyTextView = (TextView) findViewById(R.id.empty_view);
         bookListView.setEmptyView(emptyTextView);
 
         bookAdapter = new BookAdapter(this, new ArrayList<Book>());
