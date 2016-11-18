@@ -3,48 +3,12 @@
 
     <item
         is-multidex="true"
-        jar="C:\Users\dguti\Udacity\Book-Listing-Project\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
-        <dex dex="C:\Users\dguti\Udacity\Book-Listing-Project\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-ui-24.2.1_c91d95d80dc716ac4c9836dcbfa6ecdb6ba86d2f\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="C:\Users\dguti\Udacity\Book-Listing-Project\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.2.1\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.2"
         sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
         <dex dex="C:\Users\dguti\Udacity\Book-Listing-Project\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-24.2.1_25893cef41761c17abba9b7ee54a3eaf2c707b7b\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\dguti\Udacity\Book-Listing-Project\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
-        <dex dex="C:\Users\dguti\Udacity\Book-Listing-Project\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-compat-24.2.1_a895a3cedfa905e2be1aafc9213216213dfc7eec\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\dguti\Udacity\Book-Listing-Project\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
-        <dex dex="C:\Users\dguti\Udacity\Book-Listing-Project\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-24.2.1_24789bc630f741b9a743e54a9dfc6515c657b3b1\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\dguti\Udacity\Book-Listing-Project\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\libs\internal_impl-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
-        <dex dex="C:\Users\dguti\Udacity\Book-Listing-Project\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_812516a50d2ade02c14cb6668c7f98181d3fd239\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -79,7 +43,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.2"
-        sha1="9c51d9be7692b8caa5b2fff9787f1136949c28a8">
+        sha1="58eef1bac7c01bd00571135bf8197d82ed865193">
         <dex dex="C:\Users\dguti\Udacity\Book-Listing-Project\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_252fb4daf3054cf12bef445ec1be11ea413e4634\classes.dex" />
     </item>
     <item
@@ -88,8 +52,62 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.2"
-        sha1="5e58a842af65a73d92976a5fce5c3e0e06dced20">
+        sha1="50a5db0512068845234ee11eab7aa149ff7b435c">
         <dex dex="C:\Users\dguti\Udacity\Book-Listing-Project\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_49fe3ab91244a70f1f0e771ce79783a915fc5d2d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\dguti\Udacity\Book-Listing-Project\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
+        <dex dex="C:\Users\dguti\Udacity\Book-Listing-Project\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_d6d6547c4a1069e79da459e921cd490847050e95\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\dguti\Udacity\Book-Listing-Project\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
+        <dex dex="C:\Users\dguti\Udacity\Book-Listing-Project\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-utils-24.2.1_b7a410c7fe745de3f2ff6dd39f02e9f339ccef90\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\dguti\Udacity\Book-Listing-Project\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
+        <dex dex="C:\Users\dguti\Udacity\Book-Listing-Project\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-ui-24.2.1_c91d95d80dc716ac4c9836dcbfa6ecdb6ba86d2f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\dguti\Udacity\Book-Listing-Project\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
+        <dex dex="C:\Users\dguti\Udacity\Book-Listing-Project\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-compat-24.2.1_a895a3cedfa905e2be1aafc9213216213dfc7eec\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\dguti\Udacity\Book-Listing-Project\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
+        <dex dex="C:\Users\dguti\Udacity\Book-Listing-Project\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-24.2.1_24789bc630f741b9a743e54a9dfc6515c657b3b1\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\dguti\Udacity\Book-Listing-Project\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
+        <dex dex="C:\Users\dguti\Udacity\Book-Listing-Project\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_812516a50d2ade02c14cb6668c7f98181d3fd239\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -126,24 +144,6 @@
         revision="24.0.2"
         sha1="867dad63c33388ff8c7644b236579355036d075f">
         <dex dex="C:\Users\dguti\Udacity\Book-Listing-Project\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_904082290e20d85cd9a546e1792adaae0569f393\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\dguti\Udacity\Book-Listing-Project\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\libs\internal_impl-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
-        <dex dex="C:\Users\dguti\Udacity\Book-Listing-Project\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_d6d6547c4a1069e79da459e921cd490847050e95\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\dguti\Udacity\Book-Listing-Project\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
-        <dex dex="C:\Users\dguti\Udacity\Book-Listing-Project\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-utils-24.2.1_b7a410c7fe745de3f2ff6dd39f02e9f339ccef90\classes.dex" />
     </item>
     <item
         is-multidex="true"
