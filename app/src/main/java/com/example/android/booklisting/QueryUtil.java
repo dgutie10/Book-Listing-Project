@@ -33,6 +33,7 @@ public final class QueryUtil {
     private QueryUtil(){}
 
     public static ArrayList<Book> extractContent(String jsonString){
+        String author = null;
         if (TextUtils.isEmpty(jsonString)) return null;
 
         ArrayList<Book> books = new ArrayList<>();
@@ -45,9 +46,9 @@ public final class QueryUtil {
                 JSONObject currentBook = bookArray.getJSONObject(i);
                 JSONObject volumeInfo =  currentBook.getJSONObject("volumeInfo");
                 String title = volumeInfo.getString("title");
-                String author = arrayToString(volumeInfo.getString("authors"));
+                if (volumeInfo.has("authors")){author = arrayToString(volumeInfo.getString("authors"));}
+                else author = "No author found";
                 String thumbNail = volumeInfo.getJSONObject("imageLinks").getString("thumbnail");
-                Log.e("QueryUtils","img :"+ thumbNail);
                 books.add(new Book(title,author,getImageFromUrl(thumbNail,title)));
             }
 
@@ -59,7 +60,6 @@ public final class QueryUtil {
 
     public static List<Book> fetchBooks (String requestUrl){
 
-        Log.e(LOG_TAG,"onCreateLoader initiated");
         URL url = createUrl(requestUrl);
         String jsonResponse = null;
         try{
@@ -136,7 +136,6 @@ public final class QueryUtil {
             return image;
 
         }catch (IOException e){
-            Log.e(LOG_TAG,"getImageFromUrl: Error retrieving image.",e);
             return null;
         }
 
@@ -146,10 +145,10 @@ public final class QueryUtil {
         String[] arr = authors.substring(1,authors.length()-1).split(",");
         StringBuilder builder = new StringBuilder();
         for (int i = 0; i < arr.length; i++) {
-            Log.e(LOG_TAG,"author: "+arr[i].substring(1,arr[i].length()-1));
             builder.append(arr[i].substring(1,arr[i].length()-1));
             builder.append(", ");
         }
-        return builder.toString();
+        String finalString= builder.toString().trim();
+        return finalString.substring(0,finalString.length()-1);
     }
 }
