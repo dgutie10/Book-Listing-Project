@@ -105,7 +105,6 @@ public class BookActivity extends AppCompatActivity implements SearchView.OnQuer
     public boolean onQueryTextChange(String newText) {
         emptyTextView.setText("");
         progressBar.setVisibility(View.VISIBLE);
-        Log.i(LOG_TAG, "Search Item is: "+newText);
         searchParam = newText;
         getLoaderManager().restartLoader(BOOK_LOADER_ID,null,this);
         return false;
