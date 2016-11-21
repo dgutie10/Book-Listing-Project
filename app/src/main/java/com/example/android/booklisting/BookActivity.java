@@ -69,11 +69,17 @@ public class BookActivity extends AppCompatActivity implements SearchView.OnQuer
 
         if (networkInfo != null && networkInfo.isConnected()){
             bookAdapter.clear();
+
+            //Check if data comes back from query
             if(data != null && !data.isEmpty()){
                 bookAdapter.addAll(data);
-            }else if (searchParam == ""){
+            }
+            //Set placeholder when query comes back empty
+            else if (searchParam == ""){
                 emptyTextView.setText(R.string.no_books);
-            }else{
+            }
+            //Placeholder when search is initiated and doesn't show no books when the search has not started.
+            else{
                 emptyTextView.setText("");
             }
         }else{
