@@ -53,7 +53,7 @@ public final class QueryUtil {
             }
 
         }catch (JSONException e){
-            Log.e("QueryUtils", "Problem parsing the earthquake JSON results", e);
+            Log.e("QueryUtils", "Problem parsing the book JSON results", e);
         }
         return books;
     }
