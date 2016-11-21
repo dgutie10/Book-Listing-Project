@@ -75,13 +75,7 @@ public class BookActivity extends AppCompatActivity implements SearchView.OnQuer
                 bookAdapter.addAll(data);
             }
             //Set placeholder when query comes back empty
-            else if (searchParam == ""){
-                emptyTextView.setText(R.string.no_books);
-            }
-            //Placeholder when search is initiated and doesn't show no books when the search has not started.
-            else{
-                emptyTextView.setText("");
-            }
+            else if(searchParam == "") emptyTextView.setText(R.string.no_books);
         }else{
             emptyTextView.setText(R.string.no_connection);
         }
@@ -102,27 +96,31 @@ public class BookActivity extends AppCompatActivity implements SearchView.OnQuer
 
     @Override
     public boolean onQueryTextSubmit(String query) {
-        progressBar.setVisibility(View.VISIBLE);
-
-        searchParam = query;
-        getLoaderManager().restartLoader(BOOK_LOADER_ID,null,this);
+        performSearchActions(query);
         return false;
     }
 
 
     @Override
     public boolean onQueryTextChange(String newText) {
-        if (networkInfo != null && networkInfo.isConnected()) {
-            emptyTextView.setText("");
-            progressBar.setVisibility(View.VISIBLE);
-            searchParam = newText;
-            getLoaderManager().restartLoader(BOOK_LOADER_ID, null, this);
-        }else {
-            emptyTextView.setText(R.string.no_connection);
-        }
+        performSearchActions(newText);
         return false;
     }
 
+
+    private void performSearchActions(String query){
+        ConnectivityManager connectivityManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        networkInfo = connectivityManager.getActiveNetworkInfo();
+        if (networkInfo != null && networkInfo.isConnected()) {
+            emptyTextView.setText("Please perform a book search.");
+            progressBar.setVisibility(View.VISIBLE);
+            searchParam = query;
+
+        }else {
+            emptyTextView.setText(R.string.no_connection);
+        }
+        getLoaderManager().restartLoader(BOOK_LOADER_ID, null, this);
+    }
 
 
     @Override
