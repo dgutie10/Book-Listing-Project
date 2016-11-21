@@ -68,7 +68,10 @@ public class BookActivity extends AppCompatActivity implements SearchView.OnQuer
 
 
         if (networkInfo != null && networkInfo.isConnected()){
-            if (searchParam == ""){
+            bookAdapter.clear();
+            if(data != null && !data.isEmpty()){
+                bookAdapter.addAll(data);
+            }else if (searchParam == ""){
                 emptyTextView.setText(R.string.no_books);
             }else{
                 emptyTextView.setText("");
@@ -103,10 +106,14 @@ public class BookActivity extends AppCompatActivity implements SearchView.OnQuer
 
     @Override
     public boolean onQueryTextChange(String newText) {
-        emptyTextView.setText("");
-        progressBar.setVisibility(View.VISIBLE);
-        searchParam = newText;
-        getLoaderManager().restartLoader(BOOK_LOADER_ID,null,this);
+        if (networkInfo != null && networkInfo.isConnected()) {
+            emptyTextView.setText("");
+            progressBar.setVisibility(View.VISIBLE);
+            searchParam = newText;
+            getLoaderManager().restartLoader(BOOK_LOADER_ID, null, this);
+        }else {
+            emptyTextView.setText(R.string.no_connection);
+        }
         return false;
     }
 
